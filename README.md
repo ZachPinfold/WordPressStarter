@@ -1,1 +1,1 @@
-Readme for WP starter
+Readme for WP starter.

@@ -15,14 +15,13 @@ function start_up_files() {
   wp_enqueue_script('ajax', get_template_directory_uri() . '/scripts.js',  NULL, true);
   // wp_localize_scripts('ajax' , 'wpAjax', array('ajaxurl' => admin_url('admin-ajax.php')));
 
-  if (strstr($_SERVER['SERVER_NAME'], 'catherine-dixon.local')) {
+  if (strstr($_SERVER['SERVER_NAME'], 'replace-me-with-url.local')) {
     wp_enqueue_script('CDixon', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   } else {
     wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/undefined'), NULL, '1.0', true);
     wp_enqueue_script('main-university-js', get_theme_file_uri('/bundled-assets/scripts.276446dbdca2419f9b37.js'), NULL, '1.0', true);
     wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/undefined'));
   }
-  
 }
 
 add_action('wp_enqueue_scripts', 'start_up_files');

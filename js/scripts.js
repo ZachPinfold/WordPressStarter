@@ -1,4 +1,4 @@
-import "../css/style.css";
+import "../css/GlobalStyle.css";
 
 // Instantiate a new object using our modules/classes
 var mobileMenu = new MobileMenu();
